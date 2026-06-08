@@ -1,0 +1,13 @@
+format: jb-book
+root: README
+chapters:
+- file: notebooks/00_intro
+- file: book/download_repo.md
+- file: book/install_python.md
+- file: book/setup_environment.md
+- file: notebooks/01_image_handling_basics
+- file: notebooks/02_image_filtering
+- file: notebooks/03_1_spot_detection
+- file: notebooks/03_2_image_segmentation
+- file: notebooks/04_feature_extraction
+- file: notebooks/05_pipeline_and_data_analysis
