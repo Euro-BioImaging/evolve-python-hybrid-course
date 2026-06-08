@@ -22,7 +22,7 @@ Morning (10:00-13:00 CET, 9-12 UK time)
 - Image basics
 - data types
 - 2d/3d
-- Image normalisation
+- Image normalization
 
 Segmentation
 - Difference between semantic and instance segmentation
