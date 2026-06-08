@@ -10,14 +10,14 @@ Euro-BioImaging course [website](https://www.eurobioimaging.eu/events/intro-to-b
 
 ## Course structure
 
-- Day 1 - October 7th: Intro to Jupyter notebooks and python, introduction to loading images and microscopy metadata, basics of visualisation
-- **Day 2 - October 8th: Practical image processing with Python: segmentation, denoising, morphology and automation of analysis pipelines.**
-- Day 3 - October 9th: Novel strategies for segmentation: Machine learning + use of pre-trained models from the Bioimage Model Zoo.
+- Day 1 - June 23rd: Intro to Jupyter notebooks and python, introduction to loading images and microscopy metadata, basics of visualisation
+- **Day 2 - June 24th: Practical image processing with Python: segmentation, denoising, morphology and automation of analysis pipelines.**
+- Day 3 - June 24th: Novel strategies for segmentation: Machine learning + use of pre-trained models from the Bioimage Model Zoo.
 
 ### Day 2
 Classical (as opposed to AI fueled) image processing and image analysis. Use it to motivate the edition of a complete analysis script. Base afternoon on a biological application.
 
-Morning (10:00-13:00 CET)
+Morning (10:00-13:00 CET, 9-12 UK time)
 
 - Image basics
 - data types
@@ -34,7 +34,7 @@ Segmentation
 - Find cell neighbours
 - E.g. manipulating masks to extract neighbourhoods to extract ratios
 
-Afternoon (14:00-17:00 CET)
+Afternoon (14:00-17:00 CET, 13:00-16:00 UK time)
 
 - Feature extraction
 - Regionprops
