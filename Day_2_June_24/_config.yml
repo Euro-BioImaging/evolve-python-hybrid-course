@@ -1,0 +1,11 @@
+# Book settings
+title: "Day 2: Intro to BioImage Analysis with Python for Life Scientists - A distributed in-person training course"
+author: Marie Anselmet, Marvin Albert, Jean-Yves Tinevez (@ Image Analysis Hub @ Institut Pasteur) and course contributors
+logo: 'dalle_logo.webp'
+execute:
+  execute_notebooks: "off"
+parse:
+  myst_enable_extensions:
+    # don't forget to list any other extensions you want enabled,
+    # including those that are enabled by default! See here: https://jupyterbook.org/en/stable/customize/config.html
+    - html_image
