@@ -8,6 +8,12 @@ git clone <repository-url>
 cd evolve-python-hybrid-course
 ```
 
+If you already have it cloned, make sure to pull the latest changes:
+
+```bash
+git pull
+```
+
 ## Intro to Machine Learning
 
 ### Instructions
