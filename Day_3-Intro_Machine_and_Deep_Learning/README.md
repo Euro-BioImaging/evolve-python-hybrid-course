@@ -37,23 +37,22 @@ After installing Miniconda, close and reopen your terminal, then run `conda --ve
 cd Day_3-Intro_Machine_and_Deep_Learning
 ```
 
-2. Activate the course conda environment:
+2. Create the Day 3 conda environment from the environment file:
 
 ```bash
-conda activate pythoncourse
+conda env create -f environment_day3.yml
 ```
 
-If you do not have the environment yet, create it first:
+If you already created this environment before and need to update it, run:
 
 ```bash
-conda create -n pythoncourse python=3.12
-conda activate pythoncourse
+conda env update -f environment_day3.yml --prune
 ```
 
-3. Install JupyterLab and the required packages:
+3. Activate the Day 3 environment:
 
 ```bash
-pip install jupyterlab numpy scipy scikit-image scikit-learn matplotlib pandas
+conda activate day3
 ```
 
 4. Launch JupyterLab from the Day 3 folder:
@@ -92,10 +91,10 @@ The completed versions are available in `notebooks/solutions/` if you want to co
 cd Day_3-Intro_Machine_and_Deep_Learning
 ```
 
-2. Activate the course conda environment:
+2. Activate the Day 3 conda environment:
 
 ```bash
-conda activate pythoncourse
+conda activate day3
 ```
 
 3. Launch JupyterLab from the Day 3 folder:
@@ -109,25 +108,3 @@ jupyter lab
 - `4_cellpose_deep_learning.ipynb`
 - `5_napari_empanada.ipynb`
 - `6_bioimage_model_zoo.ipynb`
-
----
-
-> **Install separate environment if necessary**
-
-1. Create a new environment:
-
-```bash
-conda create -y -n dl_tools -c conda-forge python=3.10
-```
-
-2. Activate the environment:
-
-```bash
-conda activate dl_tools
-```
-
-3. Install required packages with pip:
-
-```bash
-python -m pip install "napari[all]"==0.6.6 cellpose[gui]==3.1.1.1 empanada-napari
-```
