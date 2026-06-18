@@ -8,14 +8,13 @@ Miniconda is a minimal installer for conda. It includes:
 - Python
 - A small set of essential packages
 
-By the end, you should be able to open Command Prompt or PowerShell and run:
+By the end, you should be able to open Anaconda Prompt application and run:
 
 ```bat
 conda --help
 conda --version
 ```
 
----
 
 ## 1. Download the Windows installer
 
@@ -29,7 +28,6 @@ https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe
 
 The file will usually be saved in your **Downloads** folder.
 
----
 
 ## 2. Run the installer
 
@@ -43,7 +41,6 @@ Miniconda3-latest-Windows-x86_64.exe
 3. A setup window will open.
 4. Click **Next**.
 
----
 
 ## 3. Accept the license
 
@@ -55,7 +52,6 @@ Click:
 I Agree
 ```
 
----
 
 ## 4. Choose installation type
 
@@ -69,7 +65,6 @@ This is usually best for new users because it avoids administrator permission pr
 
 Click **Next**.
 
----
 
 ## 5. Choose the install location
 
@@ -93,7 +88,6 @@ Also avoid paths with unusual characters or spaces.
 
 Click **Next**.
 
----
 
 ## 6. Add Miniconda to PATH
 
@@ -125,21 +119,19 @@ For most beginners, it is okay to leave this selected unless your course, lab, o
 
 Click **Install**.
 
----
 
 ## 7. Finish installation
 
 When installation finishes, click **Finish**.
 
-Close any open Command Prompt or PowerShell windows.
+Close any open Anaconda Prompt windows.
 
-Open a new Command Prompt or PowerShell window. This is important because PATH changes only apply to new terminal windows.
+Open a new Anaconda Prompt window. This is important because PATH changes only apply to new terminal windows.
 
----
 
 ## 8. Check that `conda` works
 
-Open **Command Prompt** or **PowerShell**.
+Open **Anaconda Prompt**.
 
 Run:
 
@@ -171,11 +163,10 @@ conda info
 
 This prints detailed information about your conda installation.
 
----
 
 ## 9. Check where Windows finds `conda`
 
-Run:
+In the Anaconda Prompt, run:
 
 ```bat
 where conda
@@ -201,7 +192,6 @@ C:\Users\YourName\miniconda3\Scripts
 C:\Users\YourName\miniconda3\Library\bin
 ```
 
----
 
 ## 10. If `conda` is not found
 
@@ -211,7 +201,7 @@ If you see:
 'conda' is not recognized as an internal or external command
 ```
 
-first close Command Prompt or PowerShell and open a new one.
+first close Anaconda Prompt and open a new one.
 
 Then try again:
 
@@ -252,21 +242,22 @@ C:\Users\YourName\miniconda3\Library\bin
 ```
 
 7. Click **OK** on all windows.
-8. Close and reopen Command Prompt or PowerShell.
+8. Close and reopen Anaconda Prompt.
 9. Test again:
 
 ```bat
 conda --help
 ```
 
----
 
-## 11. Create a test environment
+## 11. Create a minimal environment
+
+__Note__: We will use this minimal environment for the first sessions of the workshop. Be sure o have it created and running.
 
 Once `conda` works, create a test environment:
 
 ```bat
-conda create -n test-conda python
+conda create -n jupyter-env python=3.10 jupyterlab ipykernel ipython
 ```
 
 Conda will show a list of packages it wants to install.
@@ -279,14 +270,13 @@ y
 
 and press Enter.
 
----
 
 ## 12. Activate the test environment
 
 Run:
 
 ```bat
-conda activate test-conda
+conda activate jupyter-env
 ```
 
 Your terminal prompt may change.
@@ -294,16 +284,15 @@ Your terminal prompt may change.
 You may see something like:
 
 ```text
-(test-conda)
+(jupyter-env)
 ```
 
 That means the environment is active.
 
----
 
 ## 13. Check that Python works
 
-While the `test-conda` environment is active, run:
+While the `jupyter-env` environment is active, run:
 
 ```bat
 python --version
@@ -345,35 +334,8 @@ exit()
 
 and press Enter.
 
----
 
-## 14. Install a small test package
-
-With the `test-conda` environment still active, install NumPy:
-
-```bat
-conda install numpy
-```
-
-When conda asks whether to proceed, type:
-
-```text
-y
-```
-
-and press Enter.
-
-Then test NumPy:
-
-```bat
-python -c "import numpy; print(numpy.__version__)"
-```
-
-If this prints a version number, the package installed correctly.
-
----
-
-## 15. Deactivate the environment
+## 14. Deactivate the environment
 
 When you are done, run:
 
@@ -383,27 +345,8 @@ conda deactivate
 
 Your terminal prompt should return to normal.
 
----
 
-## 16. Optional: Remove the test environment
-
-After you confirm everything works, you can delete the test environment:
-
-```bat
-conda remove -n test-conda --all
-```
-
-When asked whether to proceed, type:
-
-```text
-y
-```
-
-and press Enter.
-
----
-
-## 17. Final success checklist
+## 15. Final success checklist
 
 Your installation is working if these commands run successfully:
 
@@ -414,12 +357,12 @@ conda info
 where conda
 ```
 
-You should also be able to create and use a test environment:
+You should also be able to create and use an environment:
 
 ```bat
-conda create -n test-conda python
-conda activate test-conda
+conda activate jupyter-env
 python --version
+conda deactivate
 ```
 
-If these commands work, Anaconda Miniconda is installed correctly and `conda` is findable from your Windows terminal.
+If these commands work, Anaconda Miniconda is installed correctly and `conda` is ready.

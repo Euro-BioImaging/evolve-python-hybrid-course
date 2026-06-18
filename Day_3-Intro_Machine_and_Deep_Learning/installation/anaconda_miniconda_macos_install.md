@@ -15,7 +15,6 @@ conda --help
 conda --version
 ```
 
----
 
 ## 1. Choose the correct macOS installer
 
@@ -41,7 +40,6 @@ https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
 
 Download the correct file. It will usually be saved in your **Downloads** folder.
 
----
 
 ## 2. Open Terminal
 
@@ -63,7 +61,6 @@ Terminal
 
 3. Press Enter.
 
----
 
 ## 3. Go to your Downloads folder
 
@@ -73,7 +70,6 @@ In Terminal, run:
 cd ~/Downloads
 ```
 
----
 
 ## 4. Run the installer
 
@@ -109,7 +105,6 @@ For example:
 bash Miniconda3-latest-MacOSX-arm64.sh
 ```
 
----
 
 ## 5. Accept the license
 
@@ -125,7 +120,6 @@ yes
 
 and press Enter.
 
----
 
 ## 6. Choose the install location
 
@@ -139,7 +133,6 @@ For beginners, the default location is usually fine.
 
 Press Enter to accept it.
 
----
 
 ## 7. Initialize conda so it is findable
 
@@ -167,7 +160,6 @@ On modern macOS, the default shell is usually `zsh`, so this usually updates:
 
 After installation, close Terminal completely and open it again.
 
----
 
 ## 8. Check that `conda` works
 
@@ -203,7 +195,6 @@ conda info
 
 This prints detailed information about your conda installation.
 
----
 
 ## 9. Check where macOS finds `conda`
 
@@ -231,7 +222,6 @@ Look for something like:
 /Users/yourname/miniconda3/bin
 ```
 
----
 
 ## 10. If `conda` is not found
 
@@ -277,7 +267,6 @@ conda init bash
 
 Then close and reopen Terminal.
 
----
 
 ## 11. Manual macOS PATH fix
 
@@ -335,14 +324,15 @@ Test again:
 conda --help
 ```
 
----
 
-## 12. Create a test environment
+## 12. Create a minimal environment
+
+__Note__: We will use this minimal environment for the first sessions of the workshop. Be sure o have it created and running.
 
 Once `conda` works, create a test environment:
 
 ```bash
-conda create -n test-conda python
+conda create -n jupyter-env python=3.10 jupyterlab ipykernel ipython
 ```
 
 Conda will show a list of packages it wants to install.
@@ -355,14 +345,13 @@ y
 
 and press Enter.
 
----
 
 ## 13. Activate the test environment
 
 Run:
 
 ```bash
-conda activate test-conda
+conda activate jupyter-env
 ```
 
 Your terminal prompt may change.
@@ -370,16 +359,15 @@ Your terminal prompt may change.
 You may see something like:
 
 ```text
-(test-conda)
+(jupyter-env)
 ```
 
 That means the environment is active.
 
----
 
 ## 14. Check that Python works
 
-While the `test-conda` environment is active, run:
+While the `jupyter-env` environment is active, run:
 
 ```bash
 python --version
@@ -421,65 +409,8 @@ exit()
 
 and press Enter.
 
----
 
-## 15. Install a small test package
-
-With the `test-conda` environment still active, install NumPy:
-
-```bash
-conda install numpy
-```
-
-When conda asks whether to proceed, type:
-
-```text
-y
-```
-
-and press Enter.
-
-Then test NumPy:
-
-```bash
-python -c "import numpy; print(numpy.__version__)"
-```
-
-If this prints a version number, the package installed correctly.
-
----
-
-## 16. Deactivate the environment
-
-When you are done, run:
-
-```bash
-conda deactivate
-```
-
-Your terminal prompt should return to normal.
-
----
-
-## 17. Optional: Remove the test environment
-
-After you confirm everything works, you can delete the test environment:
-
-```bash
-conda remove -n test-conda --all
-```
-
-When asked whether to proceed, type:
-
-```text
-y
-```
-
-and press Enter.
-
----
-
-## 18. Final success checklist
+## 15. Final success checklist
 
 Your installation is working if these commands run successfully:
 
@@ -490,12 +421,12 @@ conda info
 which conda
 ```
 
-You should also be able to create and use a test environment:
+You should also be able to create and use an environment:
 
 ```bash
-conda create -n test-conda python
-conda activate test-conda
+conda activate jupyter-env
 python --version
+conda deactivate
 ```
 
 If these commands work, Anaconda Miniconda is installed correctly and `conda` is findable from your macOS Terminal.
