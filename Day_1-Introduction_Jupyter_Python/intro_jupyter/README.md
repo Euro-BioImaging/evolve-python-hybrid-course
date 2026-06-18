@@ -54,6 +54,12 @@ Before starting this part of the course, make sure that you have already install
 - `ipykernel`
 - `ipython`
 
+**Help**: This is the minimal command to install the environment:
+
+```bash
+conda create -n jupyter-env python=3.10 jupyterlab ipykernel ipython
+```
+
 To check whether Jupyter is correctly installed, open the Miniforge Prompt, activate the environment you created for the course, and run:
 
 ```bash
