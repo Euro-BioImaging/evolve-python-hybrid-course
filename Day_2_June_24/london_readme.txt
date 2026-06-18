@@ -7,6 +7,6 @@ Jupyter_Notebooks: Jupyter notebooks covering today's topics.
 Today's topics are:
 
 Basics: Handling Images in Python
-Denoising and Segmnetation
+Denoising and Segmentation
 Feature Extraction
 Building a workflow/pipeline
