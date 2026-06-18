@@ -1,18 +1,31 @@
 # Day 3
 Introduction for Machine Learning and Deep Learning tools in python
 
-Before starting, make sure you have cloned this repository locally and are working from your local copy:
+## Before starting
+
+Make sure you have the course files on your computer:
+
+1. Open the course page in your browser.
+2. Click the green **Code** button.
+3. Select **Download ZIP**.
+4. Unzip the downloaded file.
+5. Open the unzipped course folder on your computer.
+
+You also need Miniconda installed before running the notebooks. To check whether it is already installed, open a terminal and run:
 
 ```bash
-git clone <repository-url>
-cd evolve-python-hybrid-course
+conda --version
 ```
 
-If you already have it cloned, make sure to pull the latest changes:
+If this command shows a conda version, you can continue with the course instructions below.
 
-```bash
-git pull
-```
+If `conda` is not found, install Miniconda using the guide for your operating system in the `installation/` folder:
+
+- [Windows Miniconda installation guide](installation/anaconda_miniconda_windows_install.md)
+- [macOS Miniconda installation guide](installation/anaconda_miniconda_macos_install.md)
+- [Linux Miniconda installation guide](installation/anaconda_miniconda_linux_install.md)
+
+After installing Miniconda, close and reopen your terminal, then run `conda --version` again to confirm it works.
 
 ## Intro to Machine Learning
 
