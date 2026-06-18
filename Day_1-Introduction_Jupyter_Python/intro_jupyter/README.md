@@ -557,10 +557,10 @@ In this exercise, we will:
     import matplotlib.pyplot as plt
 
     # Define the path to the image file
-    cell_path = Path("./data/public-repos/AC16_Rep1_18d24h_HNRNPC488_NUP594_04_SIR_THR_ALN-1_c-3.tif")
+    cell_path = Path("./data/idr0089-example/C3-AC16_Rep1_18d24h_HNRNPC488_NUP594_04_SIR_THR_ALN-1_c.tif")
 
     # Read the image
-    img = skio.imread(cell_path, plugin="tifffile")
+    img = skio.imread(cell_path)
 
     # Display the image using matplotlib
     plt.imshow(img, cmap="gray")
