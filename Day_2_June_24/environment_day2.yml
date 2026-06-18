@@ -1,0 +1,15 @@
+name: env_day2
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - jupyter
+  - matplotlib
+  - scipy
+  - scikit-image
+  - seaborn
+  - pandas
+  - ipympl
+  - tqdm
+  - stackview
