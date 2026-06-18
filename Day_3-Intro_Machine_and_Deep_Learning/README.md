@@ -1,18 +1,31 @@
 # Day 3
 Introduction for Machine Learning and Deep Learning tools in python
 
-Before starting, make sure you have cloned this repository locally and are working from your local copy:
+## Before starting
+
+Make sure you have the course files on your computer:
+
+1. Open the course page in your browser.
+2. Click the green **Code** button.
+3. Select **Download ZIP**.
+4. Unzip the downloaded file.
+5. Open the unzipped course folder on your computer.
+
+You also need Miniconda installed before running the notebooks. To check whether it is already installed, open a terminal and run:
 
 ```bash
-git clone <repository-url>
-cd evolve-python-hybrid-course
+conda --version
 ```
 
-If you already have it cloned, make sure to pull the latest changes:
+If this command shows a conda version, you can continue with the course instructions below.
 
-```bash
-git pull
-```
+If `conda` is not found, install Miniconda using the guide for your operating system in the `installation/` folder:
+
+- [Windows Miniconda installation guide](installation/anaconda_miniconda_windows_install.md)
+- [macOS Miniconda installation guide](installation/anaconda_miniconda_macos_install.md)
+- [Linux Miniconda installation guide](installation/anaconda_miniconda_linux_install.md)
+
+After installing Miniconda, close and reopen your terminal, then run `conda --version` again to confirm it works.
 
 ## Intro to Machine Learning
 
@@ -24,23 +37,22 @@ git pull
 cd Day_3-Intro_Machine_and_Deep_Learning
 ```
 
-2. Activate the course conda environment:
+2. Create the Day 3 conda environment from the environment file:
 
 ```bash
-conda activate pythoncourse
+conda env create -f environment_day3.yml
 ```
 
-If you do not have the environment yet, create it first:
+If you already created this environment before and need to update it, run:
 
 ```bash
-conda create -n pythoncourse python=3.12
-conda activate pythoncourse
+conda env update -f environment_day3.yml --prune
 ```
 
-3. Install JupyterLab and the required packages:
+3. Activate the Day 3 environment:
 
 ```bash
-pip install jupyterlab numpy scipy scikit-image scikit-learn matplotlib pandas
+conda activate day3
 ```
 
 4. Launch JupyterLab from the Day 3 folder:
@@ -79,10 +91,10 @@ The completed versions are available in `notebooks/solutions/` if you want to co
 cd Day_3-Intro_Machine_and_Deep_Learning
 ```
 
-2. Activate the course conda environment:
+2. Activate the Day 3 conda environment:
 
 ```bash
-conda activate pythoncourse
+conda activate day3
 ```
 
 3. Launch JupyterLab from the Day 3 folder:
@@ -96,25 +108,3 @@ jupyter lab
 - `4_cellpose_deep_learning.ipynb`
 - `5_napari_empanada.ipynb`
 - `6_bioimage_model_zoo.ipynb`
-
----
-
-> **Install separate environment if necessary**
-
-1. Create a new environment:
-
-```bash
-conda create -y -n dl_tools -c conda-forge python=3.10
-```
-
-2. Activate the environment:
-
-```bash
-conda activate dl_tools
-```
-
-3. Install required packages with pip:
-
-```bash
-python -m pip install "napari[all]"==0.6.6 cellpose[gui]==3.1.1.1 empanada-napari
-```
