@@ -1,0 +1,24 @@
+name: day3
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - jupyter
+  - ipykernel
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - scikit-image
+  - scikit-learn
+  - ipympl
+  - tqdm
+  - pyqt
+  - magicgui
+  - pip:
+      - napari[all]==0.6.6
+      - cellpose[gui]==3.1.1.1
+      - empanada-napari
+      - bioimageio.core
+      - bioimageio.spec
