@@ -42,6 +42,7 @@ The course is designed for beginners and focuses on practical exercises using no
     - [Step 6.2: Creating a Function to Extract `c_info` and `time_info`](#step-62-creating-a-function-to-extract-c_info-and-time_info)
     - [Step 6.3: Storing the Information in a pandas DataFrame](#step-63-storing-the-information-in-a-pandas-dataframe)
     - [Recap 6](#recap-6)
+11. [Exercise 07: Calculating Mean Pixel Values for Each Image](#exercise-7-calculating-mean-pixel-values-for-each-image)
 
 [Return to main page](https://github.com/CCI-GU-Sweden/eRImote-python-BIAS-Gtb)
 
@@ -54,7 +55,7 @@ Before starting this part of the course, make sure that you have already install
 - `ipykernel`
 - `ipython`
 
-**Help**: This is the minimal command to install the environment:
+**Help**: This is the minimal command to create the environment:
 
 ```bash
 conda create -n jupyter-env python=3.10 jupyterlab ipykernel ipython
@@ -87,7 +88,7 @@ The exact version numbers may be slightly different. The important point is that
 
 ## Example data
 
-Please download the example data by following this [link](https://gunet-my.sharepoint.com/:f:/g/personal/rafael_camacho_gu_se/IgBAiXf8aPTwRbq0IRxVnorFAT3k2B8CNSE8XzJCapTEQcs?e=Om7Wdm) and then click on "Ladda ned" on the top left corner.
+Please download the example data by following this [link](https://gunet-my.sharepoint.com/:f:/g/personal/rafael_camacho_gu_se/IgBAiXf8aPTwRbq0IRxVnorFAT3k2B8CNSE8XzJCapTEQcs?e=Om7Wdm) and then click on "Ladda ned" in the top left corner.
 
 
 **Note:** This link will only be available during day 1 while you learn to use git.
@@ -147,7 +148,7 @@ Now it’s time to create your own Jupyter Notebook. Follow these steps:
 3. Under the **Notebook** section, click on the appropriate kernel. It is very possible that you do not see a kernel for your environment here. We will discuss during the course how to solve this. The command is close to:
 
 ```bash
-python -m ipykernel install --user --name=my_env
+python -m ipykernel install --user --name=jupyter-env
 ```
 
 To enable tab completion for file paths, it's a good idea to save your notebook early on. You can give it any name you prefer. For example, you could name it `test-book.ipynb`.
@@ -588,7 +589,7 @@ In this exercise, we will:
     ```python
     # Calculate the number of pixels in the image
     num_pixels = img.size
-    print(f"the sape of the iamge is: {img.shape}")
+    print(f"The shape of the image is: {img.shape}")
     print(f"Total number of pixels: {num_pixels}")
     ```
 

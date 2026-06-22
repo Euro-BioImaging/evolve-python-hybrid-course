@@ -1,6 +1,6 @@
 # Bioimage analysis workflow – a primer
 
-In this session, we will introduce the essential steps in constructing a bioimage analysis workflow. We will explore some of the most common processes involved, focusing on the task of quantifying the area distribution of rice grains. This hands-on approach will help you understand key concepts and techniques used in bioimage analysis.
+In this session, we will introduce the essential steps in constructing a bioimage analysis workflow. We will explore some of the most common steps involved, focusing on the task of quantifying the area distribution of rice grains. This hands-on approach will help you understand key concepts and techniques used in bioimage analysis.
 
 ## Basic Scheme of a Bioimage Analysis (BIAS) Workflow
 
@@ -9,7 +9,7 @@ In this session, we will introduce the essential steps in constructing a bioimag
 3. **Image Segmentation**: This involves differentiating the foreground (objects of interest) from the background.
 4. **Segmentation Post-Processing**: Refining segmented objects, often using prior knowledge about the sample.
 5. **Connected Component Labeling**: Transitioning from segmentation to identifying individual objects. As we will discuss tomorrow, some segmentation methods already handle this step.
-6. **Quantification of the Objects**: This can include morphological features or intensity-based measurements.
+6. **Object Quantification**: This can include morphological features or intensity-based measurements.
 
 
 ## Image Input – TIFF Example
@@ -39,7 +39,7 @@ stackview.picker(img)
 ## Segmentation – First Attempt
 Let’s try to segment the image using a simple global thresholding method. We will explore both manual and automated threshold value estimation.
 
-### Excercise 2: Segmentation
+### Exercise 2: Segmentation
 #### Task 2.1: Manual segmentation 
 Now that you have explored the image values with the picker tool, choose a reasonable threshold value. All pixels above or below this value can be classified as "rice" (foreground) or background.
 
@@ -74,7 +74,7 @@ We will try to "improve" the image quality to make segmentation easier.
 ### Exercise 3: Estimation of Uneven Illumination (Background)
 
 #### Task 3.1: Gaussian Filtering – A Versatile Tool
-The background in this image has a different "scale" compared to the rice grains. We can estimate the background using Gaussian blurring. Try different sigma values, any ideas on how we can estimate the background?
+The background in this image has a different "scale" compared to the rice grains. We can estimate the background using Gaussian blurring. Try different sigma values. Can you think of a good way to estimate the background?
 
 ```python
 from skimage.filters import gaussian
@@ -137,7 +137,7 @@ Let us consider the task at hand: quantifying the area distribution of the rice 
 
 This quote from the [skimage documentation](https://scikit-image.org/docs/stable/auto_examples/segmentation/plot_watershed.html) provides a basic understanding of the watershed algorithm. We won't dive into the full details at this stage:
 
-> Starting from user-defined markers, the watershed algorithm treats pixels values as a local topography (elevation). The algorithm floods basins from the markers until basins attributed to different markers meet on watershed lines. In many cases, markers are chosen as local minima of the image, from which basins are flooded.
+> Starting from user-defined markers, the watershed algorithm treats pixel values as a local topography (elevation). The algorithm floods basins from the markers until basins attributed to different markers meet on watershed lines. In many cases, markers are chosen as local minima of the image, from which basins are flooded.
 ![watershed example from skimage](https://scikit-image.org/docs/stable/_images/sphx_glr_plot_watershed_001.png)
 
 In our case, since the objects have well-defined shapes and are nearly separated, we can use a small trick to achieve separation:
