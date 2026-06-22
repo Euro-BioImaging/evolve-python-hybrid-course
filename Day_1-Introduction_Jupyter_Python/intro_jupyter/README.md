@@ -144,7 +144,11 @@ Now it’s time to create your own Jupyter Notebook. Follow these steps:
 
 1. Navigate to the appropriate folder using the **File Browser** on the left sidebar.
 2. Open the **Launcher** by clicking on the "+" symbol in the main work area or from the top menu (File > New Launcher).
-3. Under the **Notebook** section, click on the appropriate kernel, which in this case is "EuBi Course."
+3. Under the **Notebook** section, click on the appropriate kernel. It is very possible that you do not see a kernel for your environment here. We will discuss during the course how to solve this. The command is close to:
+
+```bash
+python -m ipykernel install --user --name=my_env
+```
 
 To enable tab completion for file paths, it's a good idea to save your notebook early on. You can give it any name you prefer. For example, you could name it `test-book.ipynb`.
 
