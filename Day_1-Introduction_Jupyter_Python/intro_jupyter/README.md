@@ -85,6 +85,13 @@ traitlets : 5.15.1
 ```
 The exact version numbers may be slightly different. The important point is that `jupyterlab`, `ipykernel`, and `IPython` are installed in your course environment.
 
+## Example data
+
+Please download the example data by following this [link](https://gunet-my.sharepoint.com/:f:/g/personal/rafael_camacho_gu_se/IgBAiXf8aPTwRbq0IRxVnorFAT3k2B8CNSE8XzJCapTEQcs?e=Om7Wdm) and then click on "Ladda ned" on the top left corner.
+
+
+**Note:** This link will only be available during day 1 while you learn to use git.
+
 ## Opening Jupyter Lab
 
 Open the Miniforge Prompt and activate the environment you created for the course.
