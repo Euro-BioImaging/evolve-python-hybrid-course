@@ -5,6 +5,8 @@ dependencies:
   - python=3.10
   - pip
   - pip:
+    - jupyter
+    - ipykernel
     - numpy
     - scipy
     - pandas
